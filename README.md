@@ -15,8 +15,15 @@ yarn
 ```
 
 ## Development
+
+Start
 ```bash
 npm run dev
+```
+
+[ESLint](http://eslint.org)
+```bash
+npm run eslint
 ```
 
 ## Deploy
