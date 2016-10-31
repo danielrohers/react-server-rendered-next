@@ -27,7 +27,7 @@ class Navbar extends React.Component {
 
           <div className="collapse navbar-collapse" id="navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className={active === 'index' ? 'active' : ''}><Link href="/index">Index</Link></li>
+              <li className={active === 'index' ? 'active' : ''}><Link href="/">Index</Link></li>
               <li className={active === 'next' ? 'active' : ''}><Link href="/next">Next</Link></li>
             </ul>
           </div>
