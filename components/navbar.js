@@ -1,17 +1,13 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
-export default class extends React.Component {
+class Navbar extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      name: 'React Next'
-    }
-  }
-
-  static defaultProps = {
-    active: ''
+      name: 'React Next',
+    };
   }
 
   render() {
@@ -22,22 +18,32 @@ export default class extends React.Component {
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
               <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
             </button>
-            <a className="navbar-brand" href="#">{ this.state.name }</a>
+            <a href="/" className="navbar-brand">{ this.state.name }</a>
           </div>
 
           <div className="collapse navbar-collapse" id="navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className={ active === 'index' ? 'active' : '' }><Link href="/index">Index</Link></li>
-              <li className={ active === 'next' ? 'active' : '' }><Link href="/next">Next</Link></li>
+              <li className={active === 'index' ? 'active' : ''}><Link href="/index">Index</Link></li>
+              <li className={active === 'next' ? 'active' : ''}><Link href="/next">Next</Link></li>
             </ul>
           </div>
         </div>
       </nav>
-    )
+    );
   }
 
 }
+
+Navbar.propTypes = {
+  active: React.PropTypes.string,
+};
+
+Navbar.defaultProps = {
+  active: '',
+};
+
+export default Navbar;
