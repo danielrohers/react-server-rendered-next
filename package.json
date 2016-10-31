@@ -1,0 +1,16 @@
+{
+  "name": "react-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Daniel Rôhers Moura <rohersmoura@gmail.com> (https://github.com/danielrohers)",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^1.0.0"
+  }
+}
